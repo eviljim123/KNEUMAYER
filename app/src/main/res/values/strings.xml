@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">KNEUMAYER</string>
+    <string name="history">History</string>
+    <string name="reports">Reports</string>
+    <string name="settings">Settings</string>
+    <string name="date_time"><![CDATA[Date & Time]]></string>
+    <string name="enter_pin">Enter Pin</string>
+</resources>

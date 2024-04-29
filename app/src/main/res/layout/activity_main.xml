@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Branding Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:src="@drawable/kneu"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Time and Attendance Text -->
+    <TextView
+        android:id="@+id/tvTimeAttendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time and Attendance"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Date and Time Display -->
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="@string/date_time"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp" />
+
+    <!-- PIN Display -->
+    <EditText
+        android:id="@+id/etPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:enabled="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/enter_pin"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Numeric Keypad Container -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:padding="10dp"
+        android:background="@drawable/rounded_background"
+        android:layout_marginBottom="20dp">
+        <!-- Buttons added dynamically in Java -->
+    </GridLayout>
+
+    <!-- Admin Activities Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdminActivities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin Activities"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Spacer to push buttons to the bottom -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Settings and Reports Icons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgReports"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_reports"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/reports" />
+
+        <ImageView
+            android:id="@+id/imgHistory"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_history"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/history" />
+    </LinearLayout>
+</LinearLayout>

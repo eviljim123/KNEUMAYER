@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/etSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Surname"
+        android:inputType="textPersonName"
+        android:layout_below="@id/etName"/>
+
+    <EditText
+        android:id="@+id/etEmployeeNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Employee Number"
+        android:inputType="number"
+        android:layout_below="@id/etSurname"/>
+
+    <EditText
+        android:id="@+id/etUserPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="User PIN"
+        android:inputType="numberPassword"
+        android:layout_below="@id/etEmployeeNumber"/>
+
+    <LinearLayout
+        android:id="@+id/layoutSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/etUserPin">
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/layoutSchedule"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_below="@id/layoutSchedule"
+        android:layout_toEndOf="@id/btnSave"
+        android:layout_marginStart="16dp"/>
+
+    <ListView
+        android:id="@+id/lvUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSave"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>
